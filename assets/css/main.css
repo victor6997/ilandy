@@ -1,15 +1,3 @@
-/**
-* Template Name: iLanding
-* Template URL: https://bootstrapmade.com/ilanding-bootstrap-landing-page-template/
-* Updated: Nov 12 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -22,7 +10,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #2d465e; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0d83fd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #daa209; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -473,17 +461,17 @@ h6 {
   padding-top: 50px;
 }
 
-.footer .footer-about .logo {
+.footer .footer-sobre .logo {
   line-height: 1;
   margin-bottom: 25px;
 }
 
-.footer .footer-about .logo img {
+.footer .footer-sobre .logo img {
   max-height: 40px;
   margin-right: 6px;
 }
 
-.footer .footer-about .logo span {
+.footer .footer-sobre .logo span {
   color: var(--heading-color);
   font-family: var(--heading-font);
   font-size: 26px;
@@ -491,7 +479,7 @@ h6 {
   letter-spacing: 1px;
 }
 
-.footer .footer-about p {
+.footer .footer-sobre p {
   font-size: 14px;
   font-family: var(--heading-font);
 }
@@ -958,16 +946,16 @@ section,
 }
 
 /*--------------------------------------------------------------
-# About Section
+# sobre Section
 --------------------------------------------------------------*/
-.about .about-meta {
+.sobre .sobre-meta {
   color: var(--accent-color);
   font-weight: 600;
   margin-bottom: 1rem;
   display: inline-block;
 }
 
-.about .about-title {
+.sobre .sobre-title {
   font-size: 1.75rem;
   margin-bottom: 1rem;
   line-height: 1.2;
@@ -975,27 +963,27 @@ section,
 }
 
 @media (max-width: 992px) {
-  .about .about-title {
+  .sobre .sobre-title {
     font-size: 2rem;
   }
 }
 
-.about .about-description {
+.sobre .sobre-description {
   margin-bottom: 2rem;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
-.about .feature-list-wrapper {
+.sobre .feature-list-wrapper {
   margin-bottom: 2rem;
 }
 
-.about .feature-list {
+.sobre .feature-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.about .feature-list li {
+.sobre .feature-list li {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -1003,58 +991,58 @@ section,
   font-size: 1rem;
 }
 
-.about .feature-list li i {
+.sobre .feature-list li i {
   color: var(--accent-color);
   font-size: 1.25rem;
 }
 
-.about .profile .profile-image {
+.sobre .profile .profile-image {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.about .profile .profile-name {
+.sobre .profile .profile-name {
   font-size: 1.125rem;
   margin: 0;
 }
 
-.about .profile .profile-position {
+.sobre .profile .profile-position {
   color: var(--accent-color);
   margin: 0;
   font-size: 0.875rem;
 }
 
-.about .contact-info {
+.sobre .contact-info {
   padding: 1rem 1.5rem;
   background-color: var(--surface-color);
   border-radius: 0.5rem;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
 }
 
-.about .contact-info i {
+.sobre .contact-info i {
   color: var(--accent-color);
   font-size: 1.5rem;
 }
 
-.about .contact-info .contact-label {
+.sobre .contact-info .contact-label {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   font-size: 0.875rem;
   margin: 0;
 }
 
-.about .contact-info .contact-number {
+.sobre .contact-info .contact-number {
   font-weight: 600;
   margin: 0;
 }
 
-.about .image-wrapper {
+.sobre .image-wrapper {
   position: relative;
 }
 
 @media (max-width: 992px) {
-  .about .image-wrapper {
+  .sobre .image-wrapper {
     padding-left: 0;
     margin-top: 3rem;
     display: flex;
@@ -1064,7 +1052,7 @@ section,
 }
 
 @media (max-width: 992px) {
-  .about .image-wrapper .images {
+  .sobre .image-wrapper .images {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -1072,12 +1060,12 @@ section,
 }
 
 @media (max-width: 992px) {
-  .about .image-wrapper .main-image {
+  .sobre .image-wrapper .main-image {
     margin-left: 0;
   }
 }
 
-.about .image-wrapper .small-image {
+.sobre .image-wrapper .small-image {
   position: absolute;
   top: 20%;
   left: -10%;
@@ -1086,7 +1074,7 @@ section,
 }
 
 @media (max-width: 992px) {
-  .about .image-wrapper .small-image {
+  .sobre .image-wrapper .small-image {
     position: static;
     width: 100%;
     margin: 0 auto;
@@ -1094,7 +1082,7 @@ section,
   }
 }
 
-.about .image-wrapper .experience-badge {
+.sobre .image-wrapper .experience-badge {
   position: absolute;
   bottom: 5%;
   right: 5%;
@@ -1108,27 +1096,27 @@ section,
 }
 
 @media (max-width: 992px) {
-  .about .image-wrapper .experience-badge {
+  .sobre .image-wrapper .experience-badge {
     position: static;
     width: fit-content;
     margin: 0 auto;
   }
 }
 
-.about .image-wrapper .experience-badge h3 {
+.sobre .image-wrapper .experience-badge h3 {
   color: var(--contrast-color);
   font-size: 2.5rem;
   margin: 0;
   line-height: 0.5;
 }
 
-.about .image-wrapper .experience-badge h3 span {
+.sobre .image-wrapper .experience-badge h3 span {
   font-size: 1rem;
   display: inline-block;
   margin-left: 0.25rem;
 }
 
-.about .image-wrapper .experience-badge p {
+.sobre .image-wrapper .experience-badge p {
   margin: 0.5rem 0 0;
   font-size: 0.875rem;
 }
