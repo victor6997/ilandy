@@ -6,10 +6,11 @@
 }
 
 .accordion-item {
-  margin-bottom: 15px; /* menos espaço entre os cards */
+  margin-bottom: 25px; /* menos espaço entre os cards */
   position: relative;
   transition: transform 420ms cubic-bezier(.22,1,.36,1);
-
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* item aberto: sobe levemente */
@@ -24,6 +25,7 @@
 
 /* header */
 .accordion-header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   background-color: #FD7A02;
   padding: 15px;
   cursor: pointer;
@@ -33,11 +35,6 @@
   align-items: center;
   border-radius: 50px; /* arredonda junto com o card */
   color: #fff;
-}
-
-.accordion-item {
-  border: none !important;
-  box-shadow: none !important;
 }
 
 /* ícone */
@@ -95,32 +92,5 @@
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(0, 83, 82, 0);
   }
-}
-
-.btn-sistemas {
-  animation: pulse 6s infinite;
-}
-
-.btn-sistemas {
-  animation: pulse 6s infinite;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-sistemas:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 24px rgba(0, 83, 82, 0.4);
-}
-
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
-  line-height: 1.6;
 }
 
