@@ -446,13 +446,13 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color:var(--accent-color);
   font-size: 14px;
   position: relative;
 }
 
 .footer .footer-top {
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 .footer .footer-sobre .logo {
@@ -487,14 +487,14 @@ h6 {
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: var(--heading-color);
+  border-color: var(--heading-color);
 }
 
 .footer h4 {
@@ -537,7 +537,7 @@ h6 {
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--accent-color);
+  color: var(--heading-color);
 }
 
 .footer .footer-contact p {
@@ -545,7 +545,7 @@ h6 {
 }
 
 .footer .copyright {
-  padding: 25px 0;
+  padding: 2px 0;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
@@ -568,7 +568,7 @@ h6 {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color: var(--default-color);
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -582,7 +582,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: var(--heading-color);
   color: var(--contrast-color);
 }
 
@@ -762,8 +762,17 @@ section,
 }
 
 .hero .company-badge i {
-  font-size: 1.25rem;
+  font-size: 2rem;
+  margin-right: 0.5rem;
 }
+
+.hero .company-badge p {
+  margin: 0;
+  line-height: 1; 
+  display: flex;
+  align-items: center;
+}
+
 
 .hero .btn-primary {
   background-color: var(--accent-color);
@@ -907,16 +916,18 @@ section,
   flex-grow: 1;
 }
 
+
 .hero .stat-item .stat-content h4 {
   font-size: 1.25rem;
-  margin-bottom: 0.25rem;
-  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
 }
 
 .hero .stat-item .stat-content p {
   font-size: 0.875rem;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin: 0;
+  margin: 0px;
+  font-weight: 00;
 }
 
 @media (max-width: 575px) {
@@ -1863,8 +1874,8 @@ section,
 
 .contact .contact-form {
   background-color: var(--surface-color);
-  padding: 3rem;
-  border-radius: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
   height: 100%;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
 }
@@ -1886,49 +1897,6 @@ section,
   }
 }
 
-.contact .contact-form p {
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
-  margin-bottom: 2rem;
-}
-
-.contact .contact-form .form-control,
-.contact .contact-form .form-select {
-  padding: 0.875rem 1.25rem;
-  border-color: color-mix(in srgb, var(--default-color), transparent 90%);
-  border-radius: 0.5rem;
-  background-color: color-mix(in srgb, var(--surface-color) 90%, white 5%);
-  color: var(--default-color);
-}
-
-.contact .contact-form .form-control:focus,
-.contact .contact-form .form-select:focus {
-  box-shadow: none;
-  border-color: var(--accent-color);
-}
-
-.contact .contact-form .form-control::placeholder,
-.contact .contact-form .form-select::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-}
-
-.contact .contact-form .btn {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: 0.3s;
-}
-
-.contact .contact-form .btn i {
-  font-size: 1.25rem;
-}
-
-.contact .contact-form .btn:hover {
-  background-color: color-mix(in srgb, var(--accent-color), var(--contrast-color) 20%);
-}
 
 /*--------------------------------------------------------------
 # Service Details Section
