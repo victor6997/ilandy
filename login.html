@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Amendola & Amendola</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/login.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="assets/img/logo.png" alt="">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Sobre</a></li>
+          <li><a href="sistemas.html">Sistemas</a></li>
+          <li><a href="index.html">Contate-nos</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="https://amendola.flowdocs.com.br:2053/public/home" target="_blank">Chamados</a>
+
+    </div>
+  </header>
+
+ <body class="light-background">
+  <div class="login-container">
+    <h1>Bem-vindo 👋</h1>
+    <p>Entre com sua conta para continuar</p>
+
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+      </div>
+
+      <div class="form-group password-group">
+        <label for="password">Senha</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+          <i class="fa-regular fa-eye toggle-password" id="togglePassword"></i>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-login">Entrar</button>
+    </form>
+  </div>
+
+  <!-- Pop-up flutuante -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Script -->
+  <script>
+    const togglePassword = document.querySelector("#togglePassword");
+    const passwordInput = document.querySelector("#password");
+    const loginForm = document.querySelector("#loginForm");
+    const container = document.querySelector(".login-container");
+    const toast = document.querySelector("#toast");
+
+    // Mostrar/Ocultar senha
+    togglePassword.addEventListener("click", () => {
+      const isPassword = passwordInput.type === "password";
+      passwordInput.type = isPassword ? "text" : "password";
+      togglePassword.classList.toggle("fa-eye");
+      togglePassword.classList.toggle("fa-eye-slash");
+    });
+
+    // Simulação de login
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = document.querySelector("#email").value.trim();
+      const password = passwordInput.value.trim();
+
+      if (email === "teste@exemplo.com" && password === "123456") {
+        showToast("Login realizado com sucesso! 🎉", "success");
+      } else {
+        showToast("E-mail ou senha incorretos ❌", "error");
+        shake(container);
+      }
+    });
+
+    // Mostrar o pop-up
+    function showToast(message, type) {
+      toast.textContent = message;
+      toast.className = `toast show ${type}`;
+
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3000);
+    }
+
+    // Animação de tremida
+    function shake(element) {
+      element.classList.add("shake");
+      setTimeout(() => element.classList.remove("shake"), 500);
+    }
+  </script>
+</body>
+</html>

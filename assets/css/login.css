@@ -1,0 +1,168 @@
+/* ===== Página de Login ===== */
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110vh;
+  background: linear-gradient(135deg, var(--accent-color) 30%, color-mix(in srgb, var(--accent-color), transparent 80%) 100%);
+  font-family: var(--default-font);
+}
+
+/* ===== Card de login ===== */
+.login-container {
+  background-color: var(--surface-color);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.login-container h1 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.login-container p {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin-bottom: 30px;
+}
+
+/* ===== Campos ===== */
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--heading-color);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
+  background-color: #fff;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+/* ===== Campo de senha com olhinho ===== */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 45px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: color-mix(in srgb, var(--default-color), transparent 60%);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+  color: var(--accent-color);
+}
+
+/* ===== Botão ===== */
+.btn-login {
+  width: 100%;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: color-mix(in srgb, var(--accent-color), black 15%);
+}
+
+
+/* ===== Pop-up (toast) ===== */
+.toast {
+  visibility: hidden;
+  position: fixed;
+  top: 100px;
+  right: 30px;
+  min-width: 250px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: var(--contrast-color);
+  font-weight: 600;
+  font-size: 15px;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.4s ease;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast.success {
+  background-color: #059652;
+}
+
+.toast.error {
+  background-color: #df1529;
+}
+
+/* ===== Animações ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
+.shake {
+  animation: shake 0.4s ease;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 480px) {
+  .login-container {
+    margin: 0 20px;
+    padding: 30px 25px;
+  }
+
+  .toast {
+    right: 10px;
+    left: 10px;
+    top: 20px;
+  }
+}
