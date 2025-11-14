@@ -32,7 +32,7 @@
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
+   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
@@ -41,26 +41,9 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html">sobre </a></li>
-          <li><a href="sistemas.html" class="active">Sistemas</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="sistemas.html">Sistemas</a></li>
           <li><a href="#contact">Contate-nos</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -265,9 +248,14 @@
 
   </section>
 
+     <!-- Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/551735579090" class="whatsapp-float" target="_blank" aria-label="Converse no WhatsApp">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
+  </a>
+
   <main class="main">
 
-    <!-- Contact Section -->
+  <!-- Contact Section -->
     <section id="contact" class="contact section light-background">
 
       <!-- Section Title -->
@@ -280,17 +268,16 @@
         <div class="row g-4 g-lg-5">
           <div class="col-lg-5">
             <div class="info-box" data-aos="fade-up" data-aos-delay="200">
-              <h3>Contact Info</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
-
+              <h3>Contate-nos</h3>
+             
               <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
                   <i class="bi bi-geo-alt"></i>
                 </div>
                 <div class="content">
-                  <h4>Our Location</h4>
-                  <p>A108 Adam Street</p>
-                  <p>New York, NY 535022</p>
+                  <h4>Localização</h4>
+                  <p>Rua J. Carlos Mendes de Campos, 190</p>
+                  <p>Sales, Cristo Redentor CEP: 14980 622</p>
                 </div>
               </div>
 
@@ -299,9 +286,9 @@
                   <i class="bi bi-telephone"></i>
                 </div>
                 <div class="content">
-                  <h4>Phone Number</h4>
-                  <p>+1 5589 55488 55</p>
-                  <p>+1 6678 254445 41</p>
+                  <h4>Numero de telefone</h4>
+                  <p>+55 (17) 2137-2200</p>
+                  <p>+55 (17) 3557-9090</p>
                 </div>
               </div>
 
@@ -310,63 +297,32 @@
                   <i class="bi bi-envelope"></i>
                 </div>
                 <div class="content">
-                  <h4>Email Address</h4>
-                  <p>info@example.com</p>
-                  <p>contact@example.com</p>
+                  <h4>Email</h4>
+                  <p>contato@amendolaeamendola.com.br</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-7">
-            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
-              <h3>Get In Touch</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
-
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-                <div class="row gy-4">
-
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                  </div>
-
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                  </div>
-
-                  <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                  </div>
-
-                  <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                  </div>
-
-                  <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                    <button type="submit" class="btn">Send Message</button>
-                  </div>
-
-                </div>
-              </form>
-
-            </div>
-          </div>
-
+         <div class="col-lg-7">
+  <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1858.135713352941!2d-49.49752262320958!3d-21.339786485462337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94be7867b6fa1d17%3A0x42c5472c9c2ed4c8!2sAMENDOLA%20%26%20AMENDOLA%20SOFTWARE%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1761132974636!5m2!1spt-BR!2sbr" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+      </form>
         </div>
-
       </div>
-
     </section><!-- /Contact Section -->
 
   </main>
 
   <footer id="footer" class="footer">
-
-    <div class="container footer-top">
+<div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-sobre">
           <a href="index.html" class="logo d-flex align-items-center">
@@ -379,10 +335,10 @@
             <p><strong>Email:</strong> <span>contato@amendolaeamendola.com.br</span></p>
           </div>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.linkedin.com/company/am%C3%AAndola-%26-am%C3%AAndola" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="carros.html"><i class="bi-car-front-fill"></i></a>
+            <a href="login.html"><i class="bi bi-lock-fill"></i></a>
+            
           </div>
         </div>
 
@@ -390,23 +346,14 @@
           <h4>Links Uteis</h4>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre</a></li>
+            <li><a href="#sobre">Sobre</a></li>
             <li><a href="#">Serviços</a></li>
-            <li><a href="#">Termos de Serviço</a></li>
-            <li><a href="#">Politicas de Privacidade</a></li>
           </ul>
         </div>
-      </div>
-    </div>
-
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Amêndola & Amêndola</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a>BootstrapMade</a>
       </div>
     </div>
 
