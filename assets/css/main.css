@@ -257,61 +257,6 @@ h6 {
     color: var(--nav-hover-color);
   }
 
-  .navmenu .dropdown ul {
-    margin: 0;
-    padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    left: 14px;
-    top: 130%;
-    opacity: 0;
-    transition: 0.3s;
-    border-radius: 4px;
-    z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .navmenu .dropdown ul li {
-    min-width: 200px;
-  }
-
-  .navmenu .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 15px;
-    text-transform: none;
-    color: var(--nav-dropdown-color);
-  }
-
-  .navmenu .dropdown ul a i {
-    font-size: 12px;
-  }
-
-  .navmenu .dropdown ul a:hover,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-
-  .navmenu .dropdown .dropdown ul {
-    top: 0;
-    left: -90%;
-    visibility: hidden;
-  }
-
-  .navmenu .dropdown .dropdown:hover>ul {
-    opacity: 1;
-    top: 0;
-    left: -100%;
-    visibility: visible;
-  }
 }
 
 /* Navmenu - Mobile */
@@ -391,27 +336,6 @@ h6 {
     background-color: var(--accent-color);
     color: var(--contrast-color);
     transform: rotate(180deg);
-  }
-
-  .navmenu .dropdown ul {
-    position: static;
-    display: none;
-    z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-
-  .navmenu .dropdown>.dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
   }
 
   .mobile-nav-active {
@@ -1320,6 +1244,63 @@ section,
   color: #f28484;
 }
 
+/*--------------------------------------------------------------
+# Features 2 Section
+--------------------------------------------------------------*/
+.features-2 .feature-item .feature-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
+}
+
+.features-2 .feature-item .feature-icon i {
+  font-size: 24px;
+  color: var(--accent-color);
+}
+
+.features-2 .feature-item .feature-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.features-2 .feature-item .feature-content p {
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.features-2 .phone-mockup {
+  position: relative;
+  padding: 30px 0;
+}
+
+.features-2 .phone-mockup img {
+  max-width: 300px;
+  height: auto;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+}
+
+@media (max-width: 991.98px) {
+  .features-2 .feature-item {
+    text-align: center !important;
+    margin-bottom: 2rem;
+  }
+
+  .features-2 .feature-item .d-flex {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center !important;
+  }
+
+  .features-2 .phone-mockup {
+    margin: 3rem 0;
+  }
+}
 
 /*--------------------------------------------------------------
 # Call To Action Section
@@ -1486,172 +1467,6 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Services Section
---------------------------------------------------------------*/
-.services .service-card {
-  height: 100%;
-  padding: 30px;
-  background: var(--surface-color);
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
-
-.services .service-card:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
-}
-
-.services .service-card:hover .icon {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.services .service-card:hover .read-more {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
-}
-
-.services .service-card .icon {
-  width: 60px;
-  height: 60px;
-  margin-right: 30px;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  color: var(--accent-color);
-  font-size: 28px;
-  transition: all 0.3s ease;
-  line-height: 1;
-}
-
-.services .service-card h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.services .service-card p {
-  margin-bottom: 25px;
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.services .service-card .read-more {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--accent-color);
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.services .service-card .read-more i {
-  font-size: 14px;
-  transition: transform 0.3s ease;
-}
-
-.services .service-card .read-more:hover i {
-  transform: translateX(5px);
-}
-
-/*--------------------------------------------------------------
-# Faq Section
---------------------------------------------------------------*/
-.faq .faq-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--heading-color);
-}
-
-.faq .faq-description {
-  font-size: 1rem;
-  color: var(--default-color);
-  margin-bottom: 2rem;
-}
-
-.faq .faq-arrow {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-item {
-  background-color: var(--surface-color);
-  position: relative;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.faq .faq-container .faq-item:last-child {
-  margin-bottom: 0;
-}
-
-.faq .faq-container .faq-item h3 {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0 30px 0 0;
-  transition: 0.3s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
-.faq .faq-container .faq-item h3 .num {
-  color: var(--accent-color);
-  padding-right: 5px;
-}
-
-.faq .faq-container .faq-item h3:hover {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-item .faq-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.faq .faq-container .faq-item .faq-content p {
-  margin-bottom: 0;
-  overflow: hidden;
-}
-
-.faq .faq-container .faq-item .faq-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 16px;
-  line-height: 0;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.faq .faq-container .faq-item .faq-toggle:hover {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-active h3 {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-active .faq-content {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  opacity: 1;
-  padding-top: 10px;
-}
-
-.faq .faq-container .faq-active .faq-toggle {
-  transform: rotate(90deg);
-  color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-box {
@@ -1682,7 +1497,6 @@ section,
 
 .contact .info-box a {
   color: var(--contrast-color);
-  
 }
 
 @media (max-width: 992px) {
@@ -1909,3 +1723,38 @@ section,
   margin-right: 8px;
   color: var(--accent-color);
 }
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 1270px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+  filter: brightness(0) invert(1);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.whatsapp-float {
+  animation: pulse 5s infinite;
+}
+
